@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="524.226">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Click="OpenItem_Click" />
+                <MenuItem Header="_Save" Click="SaveItem_Click" />
+                <MenuItem Header="E_xit" Name="exitItem" Click="ExitItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="HelpItem_Click"/>
+            </MenuItem>
+        </Menu>
+       <TextBox x:Name="textBox"/>
+    </DockPanel>
+
 </Window>
