@@ -16,8 +16,22 @@
             <MenuItem Header="_Help">
                 <MenuItem Header="_About" Click="HelpItem_Click"/>
             </MenuItem>
+            <MenuItem Header="Menu">
+                <MenuItem Header="Parse" Click="Parse_Click"/>
+            </MenuItem>
         </Menu>
-       <TextBox x:Name="textBox"/>
-    </DockPanel>
 
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="textBox"/>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+            <DataGrid x:Name="datagrid" Grid.Column="2" SelectionChanged="DataGrid_SelectionChanged"/>
+        </Grid>
+
+
+    </DockPanel>
 </Window>
